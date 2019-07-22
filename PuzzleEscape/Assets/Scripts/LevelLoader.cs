@@ -10,17 +10,32 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadLevel()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Level 0");
     }
 
     public void LoadCredits()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Credits");
     }
 
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void LoseGame()
+    {
+        SceneManager.LoadScene("Lose");
+    }
+
+    public void WinGame()
+    {
+        SceneManager.LoadScene("Win");
+    }
+
+    public void CutScene1()
+    {
+        SceneManager.LoadScene("CutScene1");
     }
 
 }
