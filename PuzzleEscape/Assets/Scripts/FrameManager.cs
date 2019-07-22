@@ -5,7 +5,7 @@ using UnityEngine;
 public class FrameManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject cam;
+    private GameObject cam, ceiling, floor;
 
     private int posXFrame0 = 0;
     private int posXFrame1 = 18;
@@ -34,5 +34,15 @@ public class FrameManager : MonoBehaviour
         }
 
         cam.transform.position = newPos;
+    }
+
+    public void ShowCeiling()
+    {
+        ceiling.SetActive(true);
+    }
+
+    public void ShowFloor()
+    {
+        floor.SetActive(true);
     }
 }
