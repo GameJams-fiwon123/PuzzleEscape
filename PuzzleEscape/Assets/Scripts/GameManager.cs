@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-
+    // Timer
     [SerializeField] TextMeshProUGUI timer;
     float minCount = 1, 
           secCount = 0;
@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
         else
         {
             timer.text =  "0:00";
+            
         }
 
 
