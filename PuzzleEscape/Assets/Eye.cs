@@ -17,11 +17,6 @@ public class Eye : MonoBehaviour
     {
         Vector3 direction = player.transform.position - transform.position;
 
-        //print(direction);
-
-        //direction.x = Mathf.Clamp(direction.x, -0.3f, 0.3f);
-        //direction.y = Mathf.Clamp(direction.y, 0.5f, -0.5f);
-
         transform.localPosition = direction.normalized/3;
     }
 }
