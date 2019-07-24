@@ -5,22 +5,12 @@ using UnityEngine;
 public class FrameManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject cam, ceiling, floor;
+    private GameObject cam, ceiling, floor, goBack;
 
     private int posXFrame0 = 0;
     private int posXFrame1 = 18;
     private int posXFrame2 = 36;
     private int posXFrame3 = 54;
-
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            floor.SetActive(false);
-            ceiling.SetActive(false);
-        }
-    }
 
     public void MoveCamToFrame(int frame)
     {
@@ -48,10 +38,19 @@ public class FrameManager : MonoBehaviour
     public void ShowCeiling()
     {
         ceiling.SetActive(true);
+        goBack.SetActive(true);
     }
 
     public void ShowFloor()
     {
         floor.SetActive(true);
+        goBack.SetActive(true);
+    }
+
+    public void Hide()
+    {
+        floor.SetActive(false);
+        ceiling.SetActive(false);
+        goBack.SetActive(false);
     }
 }
