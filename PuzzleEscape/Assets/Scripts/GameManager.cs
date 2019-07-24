@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 {
     // Timer
     [SerializeField] TextMeshProUGUI timer;
-    float minCount = 1, 
+    float minCount = 5, 
           secCount = 0;
 
     // Start is called before the first frame update
