@@ -15,34 +15,38 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (FindObjectsOfType<GameManager>().Length > 1)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(gameObject);
-        }
+
+        //if (FindObjectsOfType<GameManager>().Length > 1)
+        //{
+        //    Destroy(gameObject);
+        //}
+        //else
+        //{
+        //    DontDestroyOnLoad(gameObject);
+        //}
     }
 
     private void Update()
     {
-        secCount -= Time.deltaTime;
-        if (secCount < 0) {
-            minCount--;
-            secCount = 59;
-        }
-
-        if (minCount >= 0)
+        if (timer)
         {
-            timer.text = minCount + ":" + Math.Round(secCount, 0).ToString();
-        }
-        else
-        {
-            timer.text =  "0:00";
-            
-        }
+            secCount -= Time.deltaTime;
+            if (secCount < 0)
+            {
+                minCount--;
+                secCount = 59;
+            }
 
+            if (minCount >= 0)
+            {
+                timer.text = minCount + ":" + Math.Round(secCount, 0).ToString();
+            }
+            else
+            {
+                timer.text = "0:00";
+                FindObjectOfType<LevelLoader>().LoseGame();
+            }
 
+        }
     }
 }

@@ -13,6 +13,15 @@ public class FrameManager : MonoBehaviour
     private int posXFrame3 = 54;
 
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            floor.SetActive(false);
+            ceiling.SetActive(false);
+        }
+    }
+
     public void MoveCamToFrame(int frame)
     {
         Vector3 newPos = cam.transform.position;
