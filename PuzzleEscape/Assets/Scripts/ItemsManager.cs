@@ -45,11 +45,19 @@ public class ItemsManager : MonoBehaviour
         }
     }
 
+    public Item GetCurrentItem()
+    {
+        return currentItem;
+    }
+
     public void SelectItem(int index)
     {
-        currentItem = items[index];
-        slotItem.GetComponent<Image>().sprite = currentItem.GetSprite();
-        slotItem.GetComponent<Image>().color = currentItem.GetColor();
+        if (items.Count > 0)
+        {
+            currentItem = items[index];
+            slotItem.GetComponent<Image>().sprite = currentItem.GetSprite();
+            slotItem.GetComponent<Image>().color = currentItem.GetColor();
+        }
     }
 
     public void AddItem(Item item)

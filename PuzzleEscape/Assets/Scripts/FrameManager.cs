@@ -5,7 +5,7 @@ using UnityEngine;
 public class FrameManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject cam = null, ceiling = null, floor = null, goBack = null, top = null, down = null , aquario = null, bedDown = null, bedTop = null, paper = null; 
+    private GameObject cam = null, ceiling = null, floor = null, goBack = null, top = null, down = null , aquario = null, bedDown = null, bedTop = null, paper = null, maleta = null; 
 
     private int posXFrame0 = 0;
     private int posXFrame1 = 18;
@@ -77,8 +77,16 @@ public class FrameManager : MonoBehaviour
         HideOthersFrames();
     }
 
+    public void ShowMaleta()
+    {
+        maleta.SetActive(true);
+        goBack.SetActive(true);
+        HideOthersFrames();
+    }
+
     public void Hide()
     {
+        maleta.SetActive(false);
         paper.SetActive(false);
         bedTop.SetActive(false);
         bedDown.SetActive(false);

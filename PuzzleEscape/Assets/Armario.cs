@@ -1,0 +1,24 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Armario : MonoBehaviour
+{
+    [SerializeField] GameObject armarioOpen;
+
+    int needIdItem = 2;
+    bool isOpen = false;
+
+    private void OnMouseDown()
+    {
+        if (FindObjectOfType<ItemsManager>().GetCurrentItem() != null)
+        {
+            if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == needIdItem && !isOpen)
+            {
+                gameObject.SetActive(false);
+                isOpen = true;
+                armarioOpen.SetActive(true);
+            }
+        }
+    }
+}

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Code2 : MonoBehaviour
+public class Maleta : MonoBehaviour
 {
     private void OnMouseDown()
     {
-        Destroy(gameObject);
+        FindObjectOfType<FrameManager>().ShowMaleta();
     }
 }
