@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class Chinelo : MonoBehaviour
 {
+    [SerializeField] GameObject code5;
+    bool isOpen = false;
+
     private void OnMouseDown()
     {
-        GetComponent<Animator>().Play("OpenChinelo");
+        if (!isOpen)
+        {
+            GetComponent<Animator>().Play("OpenChinelo");
+            code5.SetActive(true);
+            isOpen = true;
+        }
     }
 }
