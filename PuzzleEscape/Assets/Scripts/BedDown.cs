@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bed : MonoBehaviour
+public class BedDown : MonoBehaviour
 {
     private void OnMouseDown()
     {

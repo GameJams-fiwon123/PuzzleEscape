@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bed : MonoBehaviour
+public class Escrivaninha : MonoBehaviour
 {
     private void OnMouseDown()
     {
-        FindObjectOfType<FrameManager>().ShowBedDown();
+        FindObjectOfType<FrameManager>().ShowPaper();
     }
 }
