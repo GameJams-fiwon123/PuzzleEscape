@@ -10,6 +10,7 @@ public class Tile : MonoBehaviour
     private void OnMouseDown()
     {
         isEnabled = !isEnabled;
+        transform.GetChild(0).gameObject.SetActive(!transform.GetChild(0).gameObject.activeSelf);
         FindObjectOfType<TilesManager>().SetEnableTile(id, isEnabled);
     }
 
