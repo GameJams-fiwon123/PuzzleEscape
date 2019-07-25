@@ -6159,7 +6159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   needIdItem: -1
-  id: -1
+  id: 5
 --- !u!1 &1225107420
 GameObject:
   m_ObjectHideFlags: 0
@@ -7185,7 +7185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1370543876
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7292,7 +7292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   needIdItem: -1
-  id: -1
+  id: 4
 --- !u!1001 &1381965044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10053,6 +10053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473caa2ae4b5f4b4aa717fd9b53b8c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  code5: {fileID: 1370543875}
 --- !u!61 &1857503903
 BoxCollider2D:
   m_ObjectHideFlags: 0

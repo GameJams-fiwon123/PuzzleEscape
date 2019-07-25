@@ -12,7 +12,19 @@ public class Door : MonoBehaviour
     private void OnMouseDown()
     {
         if (isLocked)
-            GetComponent<AudioSource>().Play();
+        {
+            if (FindObjectOfType<ItemsManager>().GetCurrentItem() != null)
+            {
+                if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == 3)
+                    isLocked = false;
+                else
+                    GetComponent<AudioSource>().Play();
+            }
+            else
+            {
+                GetComponent<AudioSource>().Play();
+            }
+        }
         else
         {
             GetComponent<AudioSource>().clip = audioDestrancar;
