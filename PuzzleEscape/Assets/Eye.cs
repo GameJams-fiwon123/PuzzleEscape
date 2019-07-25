@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Eye : MonoBehaviour
 {
-    [SerializeField] GameObject player;
+    [SerializeField] GameObject player = null;
 
     // Start is called before the first frame update
     void Start()

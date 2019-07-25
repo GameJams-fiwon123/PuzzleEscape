@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    [SerializeField] Sprite spriteOpenDoor;
+    [SerializeField] Sprite spriteOpenDoor = null;
 
-    [SerializeField] AudioClip audioDestrancar;
+    [SerializeField] AudioClip audioDestrancar = null;
     bool isLocked = true;
 
     private void OnMouseDown()

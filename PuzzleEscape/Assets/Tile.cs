@@ -5,10 +5,12 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
     [SerializeField] int id = 0;
+    bool isEnabled = false;
 
     private void OnMouseDown()
     {
-        FindObjectOfType<TilesManager>().ClickTile(id);
+        isEnabled = !isEnabled;
+        FindObjectOfType<TilesManager>().SetEnableTile(id, isEnabled);
     }
 
 

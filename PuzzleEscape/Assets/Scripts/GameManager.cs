@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     // Timer
-    [SerializeField] TextMeshProUGUI timer;
+    [SerializeField] TextMeshProUGUI timer = null;
     float minCount = 5, 
           secCount = 0;
 

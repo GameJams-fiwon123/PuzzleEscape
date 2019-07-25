@@ -4,35 +4,49 @@ using UnityEngine;
 
 public class TilesManager : MonoBehaviour
 {
-
-    [SerializeField] int[] sequencia;
     int index = 0;
     bool isFinish = false;
 
-    public void ClickTile(int id)
+    public void SetEnableTile(int id, bool enable)
     {
         if (!isFinish)
         {
-            if (sequencia[index] == id)
-            {
-                index++;
-                if (index == sequencia.Length)
+            if (enable) {
+                switch (id)
                 {
-                    GetComponent<Animator>().Play("OpenQuadro");
-                    isFinish = true;
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                        index++;
+                        break;
+                    default:
+                        index--;
+                        break;
                 }
             }
             else
             {
-                index = 0;
-                print("Errado");
+                switch (id)
+                {
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                        index--;
+                        break;
+                    default:
+                        index++;
+                        break;
+                }
             }
-        }
-    }
 
-    private void OnMouseDown()
-    {
-        index = 0;
-        print("Errado");
+            if (index == 4)
+            {
+                GetComponent<Animator>().Play("OpenQuadro");
+                isFinish = true;
+            }
+
+        }
     }
 }

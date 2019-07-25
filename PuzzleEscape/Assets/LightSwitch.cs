@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class LightSwitch : MonoBehaviour
 {
-
-    [SerializeField] GameObject light;
+    [SerializeField] GameObject m_light = null;
 
     private void OnMouseDown()
     {
         GetComponent<AudioSource>().Play();
-        light.SetActive(!light.activeSelf);
+        m_light.SetActive(!m_light.activeSelf);
     }
+
 }

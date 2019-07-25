@@ -5,7 +5,7 @@ using UnityEngine;
 public class FrameManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject cam, ceiling, floor, goBack, aquario, bed;
+    private GameObject cam = null, ceiling = null, floor = null, goBack = null, top = null, down = null , aquario = null, bed = null;
 
     private int posXFrame0 = 0;
     private int posXFrame1 = 18;
@@ -39,24 +39,28 @@ public class FrameManager : MonoBehaviour
     {
         ceiling.SetActive(true);
         goBack.SetActive(true);
+        HideOthersFrames();
     }
 
     public void ShowFloor()
     {
         floor.SetActive(true);
         goBack.SetActive(true);
+        HideOthersFrames();
     }
 
     public void ShowAquario()
     {
         aquario.SetActive(true);
         goBack.SetActive(true);
+        HideOthersFrames();
     }
 
     public void ShowBed()
     {
         bed.SetActive(true);
         goBack.SetActive(true);
+        HideOthersFrames();
     }
 
     public void Hide()
@@ -66,5 +70,28 @@ public class FrameManager : MonoBehaviour
         floor.SetActive(false);
         ceiling.SetActive(false);
         goBack.SetActive(false);
+        ShowOtherFrames();
+    }
+
+    private void HideOthersFrames()
+    {
+        foreach (Transform child in transform.GetChild(0).transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+
+        top.SetActive(false);
+        down.SetActive(false);
+    }
+
+    private void ShowOtherFrames()
+    {
+        foreach (Transform child in transform.GetChild(0).transform)
+        {
+            child.gameObject.SetActive(true);
+        }
+
+        top.SetActive(true);
+        down.SetActive(true);
     }
 }
