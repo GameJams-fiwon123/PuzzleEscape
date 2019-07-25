@@ -5,38 +5,55 @@ using UnityEngine.UI;
 
 public class ItemsManager : MonoBehaviour
 {
-    private Transform slots;
+    private List<Item> items = null;
+    private int index = 0;
+    private Item currentItem = null;
+
+    Transform slotItem;
 
     // Start is called before the first frame update
     void Start()
     {
-        slots = transform.GetChild(0);
+        items = new List<Item>();
+        slotItem = transform.GetChild(0).GetChild(0);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
-    }
-
-    public void SelectItem()
-    {
-        print("oi");
-    }
-
-    public void AddItem(int id, SpriteRenderer spriteRender)
-    {
-        int count = 0; 
-        foreach( Transform slot in slots)
+        if (Input.mouseScrollDelta.y > 0 || Input.GetKeyDown(KeyCode.E))
         {
-            if (count == id)
+            index++;
+
+            if (index >= items.Count)
             {
-                slot.GetChild(0).GetComponent<Image>().sprite = spriteRender.sprite;
-                slot.GetChild(0).GetComponent<Image>().color = spriteRender.color;
-                print("Adicionado item " + id.ToString());
+                index = 0;
             }
 
-            count++;
+            SelectItem(index);
+            
         }
+        else if(Input.mouseScrollDelta.y < 0 || Input.GetKeyDown(KeyCode.Q))
+        {
+            index--;
+
+            if (index <= -1)
+            {
+                index = items.Count-1;
+            }
+
+            SelectItem(index);
+        }
+    }
+
+    public void SelectItem(int index)
+    {
+        currentItem = items[index];
+        slotItem.GetComponent<Image>().sprite = currentItem.GetSprite();
+        slotItem.GetComponent<Image>().color = currentItem.GetColor();
+    }
+
+    public void AddItem(Item item)
+    {
+        items.Add(item);
     }
 }
