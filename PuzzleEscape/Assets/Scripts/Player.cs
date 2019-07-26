@@ -23,6 +23,14 @@ public class Player : MonoBehaviour
         motion.x = Input.GetAxisRaw("Horizontal");
         motion.y = Input.GetAxisRaw("Vertical");
 
-        rb2d.velocity = motion.normalized * Time.deltaTime * speed;
+        if(motion.x > 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }else if (motion.x < 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+
+            rb2d.velocity = motion.normalized * Time.deltaTime * speed;
     }
 }
