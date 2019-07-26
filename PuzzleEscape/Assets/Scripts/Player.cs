@@ -5,7 +5,10 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [Range(0, 400)]
-    [SerializeField] int speed = 250; 
+    [SerializeField] int speed = 250;
+
+    Vector3 rightScale = new Vector3(1.4f, 1.4f);
+    Vector3 leftScale = new Vector3(-1.4f, 1.4f);
 
 
     private Rigidbody2D rb2d;
@@ -23,12 +26,15 @@ public class Player : MonoBehaviour
         motion.x = Input.GetAxisRaw("Horizontal");
         motion.y = Input.GetAxisRaw("Vertical");
 
-        if(motion.x > 0)
+        Vector3 directionX = transform.localScale;
+
+        if (motion.x > 0)
         {
-            GetComponent<SpriteRenderer>().flipX = false;
-        }else if (motion.x < 0)
+            transform.localScale = rightScale;
+        }
+        else if (motion.x < 0)
         {
-            GetComponent<SpriteRenderer>().flipX = true;
+            transform.localScale = leftScale;
         }
 
             rb2d.velocity = motion.normalized * Time.deltaTime * speed;
