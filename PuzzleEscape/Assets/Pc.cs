@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Pc : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    bool isImpress = false;
 
-    // Update is called once per frame
-    void Update()
+    private void OnMouseDown()
     {
-        
+        if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == 7 && !isImpress)
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+            isImpress = true;
+        }
     }
 }

@@ -86,14 +86,22 @@ public class FrameManager : MonoBehaviour
 
     public void Hide()
     {
-        maleta.SetActive(false);
-        paper.SetActive(false);
-        bedTop.SetActive(false);
-        bedDown.SetActive(false);
-        aquario.SetActive(false);
-        floor.SetActive(false);
-        ceiling.SetActive(false);
-        goBack.SetActive(false);
+        if (maleta) 
+            maleta.SetActive(false);
+        if (paper)
+            paper.SetActive(false);
+        if (bedTop)
+            bedTop.SetActive(false);
+        if (bedDown)
+            bedDown.SetActive(false);
+        if (aquario)
+            aquario.SetActive(false);
+        if (floor)
+            floor.SetActive(false);
+        if (ceiling)
+            ceiling.SetActive(false);
+        if (goBack)
+            goBack.SetActive(false);
         ShowOtherFrames();
     }
 

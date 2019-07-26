@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Travesseiro : MonoBehaviour
 {
-    [SerializeField] GameObject item;
+    [SerializeField] GameObject item = null;
 
     private void OnMouseDown()
     {
@@ -14,6 +14,7 @@ public class Travesseiro : MonoBehaviour
 
     public void FinishAnimation()
     {
-        item.GetComponent<Item>().ChangeTake(true);
+        if (item)
+            item.GetComponent<Item>().ChangeTake(true);
     }
 }

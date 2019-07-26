@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Pintura : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] GameObject item;
+
+    private void OnMouseDown()
     {
-        
+        if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == 8)
+            GetComponent<Animator>().Play("OpenPintura");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void FinishAnimation()
     {
-        
+        if (item)
+        {
+            item.GetComponent<Item>().ChangeTake(true);
+        }
     }
 }

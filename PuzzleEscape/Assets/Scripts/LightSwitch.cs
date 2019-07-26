@@ -11,7 +11,9 @@ public class LightSwitch : MonoBehaviour
     {
         GetComponent<AudioSource>().Play();
         m_light.SetActive(!m_light.activeSelf);
-        stars.SetActive(!stars.activeSelf);
+
+        if (stars != null)
+            stars.SetActive(!stars.activeSelf);
     }
 
 }
