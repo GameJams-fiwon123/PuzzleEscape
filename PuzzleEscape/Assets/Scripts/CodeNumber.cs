@@ -15,5 +15,6 @@ public class CodeNumber : MonoBehaviour
             number = 0;
         }
         GetComponent<TextMeshProUGUI>().text = number.ToString();
+        GetComponent<AudioSource>().Play();
     }
 }

@@ -12,6 +12,7 @@ public class Tile : MonoBehaviour
         isEnabled = !isEnabled;
         transform.GetChild(0).gameObject.SetActive(!transform.GetChild(0).gameObject.activeSelf);
         FindObjectOfType<TilesManager>().SetEnableTile(id, isEnabled);
+        GetComponent<AudioSource>().Play();
     }
 
 

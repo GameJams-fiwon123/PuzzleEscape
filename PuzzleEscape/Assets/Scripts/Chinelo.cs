@@ -14,6 +14,7 @@ public class Chinelo : MonoBehaviour
             GetComponent<Animator>().Play("OpenChinelo");
             code5.SetActive(true);
             isOpen = true;
+            GetComponent<AudioSource>().Play();
         }
     }
 }

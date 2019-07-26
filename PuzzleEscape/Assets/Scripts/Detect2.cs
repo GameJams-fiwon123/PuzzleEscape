@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class Detect2 : MonoBehaviour
 {
+    bool isPutted = false;
+
     private void OnMouseDown()
     {
-        if (FindObjectOfType<ItemsManager>().GetCurrentItem() != null)
+        if (!isPutted)
         {
-            if(FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == 5)
+            if (FindObjectOfType<ItemsManager>().GetCurrentItem() != null)
             {
-                transform.GetChild(0).gameObject.SetActive(true);
+                if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == 5)
+                {
+                    transform.GetChild(0).gameObject.SetActive(true);
+                    GetComponent<AudioSource>().Play();
+                    isPutted = true;
+                }
             }
         }
     }

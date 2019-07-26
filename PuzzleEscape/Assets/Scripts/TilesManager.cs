@@ -44,6 +44,7 @@ public class TilesManager : MonoBehaviour
             if (index == 4)
             {
                 GetComponent<Animator>().Play("OpenQuadro");
+                GetComponent<AudioSource>().Play();
                 isFinish = true;
             }
 

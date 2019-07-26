@@ -20,6 +20,8 @@ public class Item : MonoBehaviour
     {
         if (needIdItem == -1)
         {
+            AudioSource.PlayClipAtPoint(GetComponent<AudioSource>().clip, Camera.main.transform.position, GetComponent<AudioSource>().volume);
+            
             AddItem();
         }
         else
@@ -28,7 +30,6 @@ public class Item : MonoBehaviour
                 if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == needIdItem)
                 {
                     AddItem();
-                    
                 }
                 else
                 {

@@ -27,6 +27,7 @@ public class ButtonOpen : MonoBehaviour
                 maletaSprite.sprite = maletaOpen;
                 transform.GetChild(0).gameObject.SetActive(true);
                 isOpen = true;
+                GetComponent<AudioSource>().Play();
             }
         }
     }

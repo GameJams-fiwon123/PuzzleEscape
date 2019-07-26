@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
-    [SerializeField] AudioClip tileAudio;
-    [SerializeField] AudioClip level0Audio;
-    [SerializeField] AudioClip level1Audio;
+    [SerializeField] AudioClip tileAudio = null;
+    [SerializeField] AudioClip level0Audio = null;
+    [SerializeField] AudioClip level1Audio = null;
 
     // Start is called before the first frame update
     void Start()
