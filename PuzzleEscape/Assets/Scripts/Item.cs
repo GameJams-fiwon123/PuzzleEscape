@@ -10,35 +10,46 @@ public class Item : MonoBehaviour
     Sprite m_sprite = null;
     Color m_color;
 
+    [SerializeField] bool canTake = true;
+
     private void Start()
     {
         m_sprite = GetComponent<SpriteRenderer>().sprite;
         m_color = GetComponent<SpriteRenderer>().color;
     }
 
+    public void ChangeTake(bool flag)
+    {
+        canTake = flag;
+    }
+
     private void OnMouseDown()
     {
-        if (needIdItem == -1)
+        if (canTake)
         {
-            AudioSource.PlayClipAtPoint(GetComponent<AudioSource>().clip, Camera.main.transform.position, GetComponent<AudioSource>().volume);
-            
-            AddItem();
-        }
-        else
-        {
-            if (FindObjectOfType<ItemsManager>().GetCurrentItem() != null){
-                if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == needIdItem)
+            if (needIdItem == -1)
+            {
+                AudioSource.PlayClipAtPoint(GetComponent<AudioSource>().clip, Camera.main.transform.position, GetComponent<AudioSource>().volume);
+
+                AddItem();
+            }
+            else
+            {
+                if (FindObjectOfType<ItemsManager>().GetCurrentItem() != null)
                 {
-                    AddItem();
+                    if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == needIdItem)
+                    {
+                        AddItem();
+                    }
+                    else
+                    {
+                        print("Precisa do item " + needIdItem.ToString());
+                    }
                 }
                 else
                 {
                     print("Precisa do item " + needIdItem.ToString());
                 }
-            }
-            else
-            {
-                print("Precisa do item " + needIdItem.ToString());
             }
         }
     }
