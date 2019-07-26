@@ -44,9 +44,19 @@ public class GameManager : MonoBehaviour
             else
             {
                 timer.text = "0:00";
-                FindObjectOfType<LevelLoader>().LoseGame();
+                LoseGame();
             }
 
         }
+    }
+
+    public void LoseGame()
+    {
+        FindObjectOfType<LevelLoader>().LoseGame();
+    }
+
+    public void WinGame()
+    {
+        FindObjectOfType<LevelLoader>().WinGame();
     }
 }

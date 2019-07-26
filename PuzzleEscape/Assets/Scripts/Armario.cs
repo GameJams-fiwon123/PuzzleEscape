@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Armario : MonoBehaviour
 {
-    [SerializeField] GameObject armarioOpen;
+    [SerializeField] GameObject armarioOpen = null;
 
     int needIdItem = 2;
     bool isOpen = false;

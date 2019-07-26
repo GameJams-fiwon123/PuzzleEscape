@@ -8,9 +8,14 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void LoadLevel()
+    public void LoadLevel0()
     {
         SceneManager.LoadScene("Level 0");
+    }
+
+    public void LoadLevel1()
+    {
+        SceneManager.LoadScene("Level 1");
     }
 
     public void LoadCredits()
@@ -37,5 +42,12 @@ public class LevelLoader : MonoBehaviour
     {
         SceneManager.LoadScene("CutScene1");
     }
+
+    public void CutScene2()
+    {
+        SceneManager.LoadScene("CutScene2");
+    }
+
+
 
 }

@@ -16,7 +16,12 @@ public class Door : MonoBehaviour
             if (FindObjectOfType<ItemsManager>().GetCurrentItem() != null)
             {
                 if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == 3)
+                {
                     isLocked = false;
+                    GetComponent<AudioSource>().clip = audioDestrancar;
+                    GetComponent<AudioSource>().Play();
+                    GetComponent<SpriteRenderer>().sprite = spriteOpenDoor;
+                }
                 else
                     GetComponent<AudioSource>().Play();
             }
@@ -27,9 +32,7 @@ public class Door : MonoBehaviour
         }
         else
         {
-            GetComponent<AudioSource>().clip = audioDestrancar;
-            GetComponent<AudioSource>().Play();
-            GetComponent<SpriteRenderer>().sprite = spriteOpenDoor;
+            FindObjectOfType<GameManager>().WinGame();
         }
     }
 }

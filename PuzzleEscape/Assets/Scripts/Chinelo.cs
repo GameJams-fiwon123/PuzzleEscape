@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Chinelo : MonoBehaviour
 {
-    [SerializeField] GameObject code5;
+    [SerializeField] GameObject code5 = null;
     bool isOpen = false;
 
     private void OnMouseDown()
