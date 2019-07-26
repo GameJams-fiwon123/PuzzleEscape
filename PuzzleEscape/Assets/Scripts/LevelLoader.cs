@@ -8,14 +8,14 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void LoadLevel0()
-    {
-        SceneManager.LoadScene("Level 0");
-    }
-
     public void LoadLevel1()
     {
         SceneManager.LoadScene("Level 1");
+    }
+
+    public void LoadLevel2()
+    {
+        SceneManager.LoadScene("Level 2");
     }
 
     public void LoadCredits()
@@ -39,7 +39,7 @@ public class LevelLoader : MonoBehaviour
 
     public void WinGame()
     {
-        SceneManager.LoadScene("Win");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 
     public void CutScene1()

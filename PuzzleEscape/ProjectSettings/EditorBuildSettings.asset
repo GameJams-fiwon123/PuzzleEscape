@@ -9,14 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 52ac06d9419aa07458eb3334796ad5b3
   - enabled: 1
-    path: Assets/Scenes/Level 0.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Controles.unity
+    guid: 0fe4d9898629c5f4397b06b4a66edfa9
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 4154ae14709368d4d82d53bed7ca2ec2
-  - enabled: 1
-    path: Assets/Scenes/Win.unity
-    guid: ba436b8f7c28ef44686c4497b48f3f0c
   - enabled: 1
     path: Assets/Scenes/Lose.unity
     guid: fc266aaf65dec894a9fc308c7a914c07
@@ -24,12 +21,15 @@ EditorBuildSettings:
     path: Assets/Scenes/CutScene1.unity
     guid: 8fe84f2250f67c345b83bfcfb48d3556
   - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
     path: Assets/Scenes/CutScene2.unity
     guid: 55d1cf89261eb9c4ea3a81e74a805712
   - enabled: 1
-    path: Assets/Scenes/Level 1.unity
-    guid: 4c6afd2dd9dcaa5409beaae3226c905b
+    path: Assets/Scenes/Level 2.unity
+    guid: 48dec07c4d91f9d4b8dea3eec252120e
   - enabled: 1
-    path: Assets/Scenes/Controles.unity
-    guid: 0fe4d9898629c5f4397b06b4a66edfa9
+    path: Assets/Scenes/Win.unity
+    guid: ba436b8f7c28ef44686c4497b48f3f0c
   m_configObjects: {}

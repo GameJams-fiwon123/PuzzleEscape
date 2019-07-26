@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pintura : MonoBehaviour
 {
-    [SerializeField] GameObject item;
+    [SerializeField] GameObject item = null;
 
     private void OnMouseDown()
     {

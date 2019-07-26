@@ -5,8 +5,8 @@ using UnityEngine;
 public class AquarioPendrive : MonoBehaviour
 {
 
-    [SerializeField] GameObject item;
-    [SerializeField] Sprite aquarioQuebrado;
+    [SerializeField] GameObject item = null;
+    [SerializeField] Sprite aquarioQuebrado = null;
 
     bool isBreak = false;
 
