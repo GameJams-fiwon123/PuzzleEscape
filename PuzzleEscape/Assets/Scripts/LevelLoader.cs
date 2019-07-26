@@ -23,6 +23,10 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene("Credits");
     }
 
+    public void Controles()
+    {
+        SceneManager.LoadScene("Controles");
+    }
     public void ExitGame()
     {
         Application.Quit();

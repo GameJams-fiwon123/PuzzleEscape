@@ -15,15 +15,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        //if (FindObjectsOfType<GameManager>().Length > 1)
-        //{
-        //    Destroy(gameObject);
-        //}
-        //else
-        //{
-        //    DontDestroyOnLoad(gameObject);
-        //}
+        FindObjectOfType<MusicManager>().ChangeToLevel0Audio();
     }
 
     private void Update()
