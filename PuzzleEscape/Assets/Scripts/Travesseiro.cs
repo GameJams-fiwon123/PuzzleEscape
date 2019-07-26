@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Travesseiro : MonoBehaviour
 {
-    [SerializeField] GameObject item = null;
+    [SerializeField] GameObject item;
 
     private void OnMouseDown()
     {
