@@ -5,6 +5,7 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     [SerializeField] Sprite spriteOpenDoor = null;
+    [SerializeField] SpriteRenderer backgroundRoom = null;
 
     [SerializeField] AudioClip audioDestrancar = null;
     bool isLocked = true;
@@ -20,7 +21,7 @@ public class Door : MonoBehaviour
                     isLocked = false;
                     GetComponent<AudioSource>().clip = audioDestrancar;
                     GetComponent<AudioSource>().Play();
-                    GetComponent<SpriteRenderer>().sprite = spriteOpenDoor;
+                    backgroundRoom.sprite = spriteOpenDoor;
                 }
                 else
                     GetComponent<AudioSource>().Play();
