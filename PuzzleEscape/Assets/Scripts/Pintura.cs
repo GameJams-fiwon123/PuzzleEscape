@@ -8,8 +8,11 @@ public class Pintura : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == 8)
-            GetComponent<Animator>().Play("OpenPintura");
+        if (FindObjectOfType<ItemsManager>())
+        {
+            if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == 8)
+                GetComponent<Animator>().Play("OpenPintura");
+        }
     }
 
     public void FinishAnimation()

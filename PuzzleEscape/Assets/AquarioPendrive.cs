@@ -12,11 +12,14 @@ public class AquarioPendrive : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == 6 && !isBreak)
+        if (FindObjectOfType<ItemsManager>().GetCurrentItem())
         {
-            item.SetActive(true);
-            GetComponent<SpriteRenderer>().sprite = aquarioQuebrado;
-            isBreak = true;
+            if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == 6 && !isBreak)
+            {
+                item.SetActive(true);
+                GetComponent<SpriteRenderer>().sprite = aquarioQuebrado;
+                isBreak = true;
+            }
         }
     }
 }

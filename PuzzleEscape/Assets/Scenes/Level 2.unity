@@ -6093,6 +6093,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3119424290619151629, guid: 265969eb1e4e7814795f94d788e0240e,
+        type: 3}
+      propertyPath: level2Audio
+      value: 
+      objectReference: {fileID: 8300000, guid: a14f5d8e3cc8a294bb7c4ace174463b8, type: 3}
+    - target: {fileID: 3119424290619151629, guid: 265969eb1e4e7814795f94d788e0240e,
+        type: 3}
+      propertyPath: level1Audio
+      value: 
+      objectReference: {fileID: 8300000, guid: ce09b6f7cdcc92c469a2448a23324826, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 265969eb1e4e7814795f94d788e0240e, type: 3}
 --- !u!1 &1830159104
@@ -7983,6 +7993,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timer
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7113383515967119756, guid: c36ff898253f3af498acaa58f530c59e,
+        type: 3}
+      propertyPath: level
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c36ff898253f3af498acaa58f530c59e, type: 3}

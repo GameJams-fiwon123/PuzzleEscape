@@ -12,10 +12,12 @@ public class GameManager : MonoBehaviour
     float minCount = 5, 
           secCount = 0;
 
+    [SerializeField]  int level = 1;
+
     // Start is called before the first frame update
     void Start()
     {
-        FindObjectOfType<MusicManager>().ChangeToLevel0Audio();
+        FindObjectOfType<MusicManager>().ChangeToLevelAudio(level);
     }
 
     private void Update()

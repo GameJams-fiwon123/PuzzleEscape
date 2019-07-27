@@ -5,8 +5,8 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour
 {
     [SerializeField] AudioClip tileAudio = null;
-    [SerializeField] AudioClip level0Audio = null;
     [SerializeField] AudioClip level1Audio = null;
+    [SerializeField] AudioClip level2Audio = null;
 
     // Start is called before the first frame update
     void Start()
@@ -32,15 +32,18 @@ public class MusicManager : MonoBehaviour
         GetComponent<AudioSource>().Play();
     }
 
-    public void ChangeToLevel0Audio()
+    public void ChangeToLevelAudio(int level)
     {
-        GetComponent<AudioSource>().clip = level0Audio;
-        GetComponent<AudioSource>().Play();
-    }
-
-    public void ChangeToLevel1Audio()
-    {
-        GetComponent<AudioSource>().clip = level1Audio;
+        switch (level)
+        {
+            case 1:
+                GetComponent<AudioSource>().clip = level1Audio;
+                break;
+            case 2:
+                GetComponent<AudioSource>().clip = level2Audio;
+                break;
+        }
+        
         GetComponent<AudioSource>().Play();
     }
 }

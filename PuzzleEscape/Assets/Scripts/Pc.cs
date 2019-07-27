@@ -8,11 +8,13 @@ public class Pc : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == 7 && !isImpress)
-        {
-            GetComponent<AudioSource>().Play();
-            transform.GetChild(0).gameObject.SetActive(true);
-            isImpress = true;
+        if(FindObjectOfType<ItemsManager>().GetCurrentItem()){
+            if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == 7 && !isImpress)
+            {
+                GetComponent<AudioSource>().Play();
+                transform.GetChild(0).gameObject.SetActive(true);
+                isImpress = true;
+            }
         }
     }
 }
