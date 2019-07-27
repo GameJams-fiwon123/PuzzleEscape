@@ -7,6 +7,7 @@ public class MusicManager : MonoBehaviour
     [SerializeField] AudioClip tileAudio = null;
     [SerializeField] AudioClip level1Audio = null;
     [SerializeField] AudioClip level2Audio = null;
+    [SerializeField] AudioClip historiaAudio = null;
 
     // Start is called before the first frame update
     void Start()

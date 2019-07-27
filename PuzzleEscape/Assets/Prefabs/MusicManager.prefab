@@ -45,8 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileAudio: {fileID: 8300000, guid: 87fdce828622f754e973fed84895fba8, type: 3}
-  level0Audio: {fileID: 8300000, guid: ce09b6f7cdcc92c469a2448a23324826, type: 3}
-  level1Audio: {fileID: 8300000, guid: a14f5d8e3cc8a294bb7c4ace174463b8, type: 3}
+  level1Audio: {fileID: 8300000, guid: ce09b6f7cdcc92c469a2448a23324826, type: 3}
+  level2Audio: {fileID: 8300000, guid: a14f5d8e3cc8a294bb7c4ace174463b8, type: 3}
+  historiaAudio: {fileID: 8300000, guid: e0d57144be7ea474d9b911e94d411b01, type: 3}
 --- !u!82 &3119424290619151628
 AudioSource:
   m_ObjectHideFlags: 0

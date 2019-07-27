@@ -51,6 +51,6 @@ public class GameManager : MonoBehaviour
 
     public void WinGame()
     {
-        FindObjectOfType<LevelLoader>().WinGame();
+        FindObjectOfType<LevelLoader>().NextScene();
     }
 }
