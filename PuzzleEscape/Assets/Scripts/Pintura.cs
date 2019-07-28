@@ -11,6 +11,7 @@ public class Pintura : MonoBehaviour
         if (FindObjectOfType<ItemsManager>())
         {
             if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == 8)
+                FindObjectOfType<ItemsManager>().RemoveSelectItem();
                 GetComponent<Animator>().Play("OpenPintura");
         }
     }

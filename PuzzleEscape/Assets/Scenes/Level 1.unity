@@ -6127,10 +6127,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5172794308563593230, guid: 6202b777528b97040bb8244d10f9e549,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5172794308563593216, guid: 6202b777528b97040bb8244d10f9e549,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 5172794308563593217, guid: 6202b777528b97040bb8244d10f9e549,
         type: 3}

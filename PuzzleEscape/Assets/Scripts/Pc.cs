@@ -12,6 +12,7 @@ public class Pc : MonoBehaviour
             if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == 7 && !isImpress)
             {
                 GetComponent<AudioSource>().Play();
+                FindObjectOfType<ItemsManager>().RemoveSelectItem();
                 transform.GetChild(0).gameObject.SetActive(true);
                 isImpress = true;
             }

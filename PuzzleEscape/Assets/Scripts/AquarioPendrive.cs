@@ -17,6 +17,7 @@ public class AquarioPendrive : MonoBehaviour
             if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == 6 && !isBreak)
             {
                 item.SetActive(true);
+                FindObjectOfType<ItemsManager>().RemoveSelectItem();
                 GetComponent<SpriteRenderer>().sprite = aquarioQuebrado;
                 isBreak = true;
             }
