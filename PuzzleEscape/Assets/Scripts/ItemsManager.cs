@@ -22,27 +22,37 @@ public class ItemsManager : MonoBehaviour
     {
         if (Input.mouseScrollDelta.y > 0 || Input.GetKeyDown(KeyCode.E))
         {
-            index++;
+            NextIem();
 
-            if (index >= items.Count)
-            {
-                index = 0;
-            }
-
-            SelectItem(index);
-            
         }
         else if(Input.mouseScrollDelta.y < 0 || Input.GetKeyDown(KeyCode.Q))
         {
-            index--;
-
-            if (index <= -1)
-            {
-                index = items.Count-1;
-            }
-
-            SelectItem(index);
+            PreviousItem();
         }
+    }
+
+    private void PreviousItem()
+    {
+        index--;
+
+        if (index <= -1)
+        {
+            index = items.Count - 1;
+        }
+
+        SelectItem(index);
+    }
+
+    private void NextIem()
+    {
+        index++;
+
+        if (index >= items.Count)
+        {
+            index = 0;
+        }
+
+        SelectItem(index);
     }
 
     public Item GetCurrentItem()
@@ -60,8 +70,15 @@ public class ItemsManager : MonoBehaviour
         }
     }
 
+    public void RemoveSelectItem()
+    {
+        items.RemoveAt(index);
+        NextIem();
+    }
+
     public void AddItem(Item item)
     {
         items.Add(item);
+        SelectItem(items.Count-1);
     }
 }

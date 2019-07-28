@@ -39,6 +39,7 @@ public class Item : MonoBehaviour
                 {
                     if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == needIdItem)
                     {
+                        FindObjectOfType<ItemsManager>().RemoveSelectItem();
                         AddItem();
                     }
                     else
