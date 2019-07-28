@@ -15,6 +15,7 @@ public class Armario : MonoBehaviour
         {
             if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == needIdItem && !isOpen)
             {
+                FindObjectOfType<ItemsManager>().RemoveSelectItem();
                 gameObject.SetActive(false);
                 isOpen = true;
                 armarioOpen.SetActive(true);

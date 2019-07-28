@@ -19,6 +19,7 @@ public class Door : MonoBehaviour
                 if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == 3)
                 {
                     isLocked = false;
+                    FindObjectOfType<ItemsManager>().RemoveSelectItem();
                     GetComponent<AudioSource>().clip = audioDestrancar;
                     GetComponent<AudioSource>().Play();
                     backgroundRoom.sprite = spriteOpenDoor;

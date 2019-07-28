@@ -62,11 +62,17 @@ public class ItemsManager : MonoBehaviour
 
     public void SelectItem(int index)
     {
+        print(items.Count);
         if (items.Count > 0)
         {
             currentItem = items[index];
             slotItem.GetComponent<Image>().sprite = currentItem.GetSprite();
             slotItem.GetComponent<Image>().color = currentItem.GetColor();
+        }
+        else
+        {
+            slotItem.GetComponent<Image>().sprite = null;
+            slotItem.GetComponent<Image>().color = new Color(1,1,1,0);
         }
     }
 

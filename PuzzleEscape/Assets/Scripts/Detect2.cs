@@ -14,6 +14,7 @@ public class Detect2 : MonoBehaviour
             {
                 if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == 5)
                 {
+                    FindObjectOfType<ItemsManager>().RemoveSelectItem();
                     transform.GetChild(0).gameObject.SetActive(true);
                     GetComponent<AudioSource>().Play();
                     isPutted = true;
