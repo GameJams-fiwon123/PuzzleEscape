@@ -46,12 +46,11 @@ public class ItemsManager : MonoBehaviour
     private void NextIem()
     {
         index++;
-
+        
         if (index >= items.Count)
         {
             index = 0;
         }
-
         SelectItem(index);
     }
 
@@ -84,6 +83,7 @@ public class ItemsManager : MonoBehaviour
     public void AddItem(Item item)
     {
         items.Add(item);
+        index = items.Count - 1;
         SelectItem(items.Count-1);
     }
 }
