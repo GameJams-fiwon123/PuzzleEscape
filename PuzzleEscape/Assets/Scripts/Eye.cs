@@ -17,6 +17,6 @@ public class Eye : MonoBehaviour
     {
         Vector3 direction = player.transform.position - transform.position;
 
-        transform.localPosition = direction.normalized/5;
+        transform.localPosition = direction.normalized/7;
     }
 }

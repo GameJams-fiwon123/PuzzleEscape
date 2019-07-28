@@ -42,14 +42,6 @@ public class Item : MonoBehaviour
                         FindObjectOfType<ItemsManager>().RemoveSelectItem();
                         AddItem();
                     }
-                    else
-                    {
-                        print("Precisa do item " + needIdItem.ToString());
-                    }
-                }
-                else
-                {
-                    print("Precisa do item " + needIdItem.ToString());
                 }
             }
         }
