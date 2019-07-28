@@ -18,6 +18,7 @@ public class AquarioPendrive : MonoBehaviour
             {
                 item.SetActive(true);
                 FindObjectOfType<ItemsManager>().RemoveSelectItem();
+                GetComponent<AudioSource>().Play();
                 GetComponent<SpriteRenderer>().sprite = aquarioQuebrado;
                 isBreak = true;
             }

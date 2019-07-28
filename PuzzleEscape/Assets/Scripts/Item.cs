@@ -39,6 +39,7 @@ public class Item : MonoBehaviour
                 {
                     if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == needIdItem)
                     {
+                        AudioSource.PlayClipAtPoint(GetComponent<AudioSource>().clip, Camera.main.transform.position, GetComponent<AudioSource>().volume);
                         FindObjectOfType<ItemsManager>().RemoveSelectItem();
                         AddItem();
                     }
