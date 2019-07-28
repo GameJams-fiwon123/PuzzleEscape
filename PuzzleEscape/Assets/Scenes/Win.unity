@@ -189,6 +189,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97ac8defa26a29149b115258a81b0604, type: 3}
+--- !u!1001 &625791107
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3119424290619151627, guid: 265969eb1e4e7814795f94d788e0240e,
+        type: 3}
+      propertyPath: m_Name
+      value: MusicManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119424290619151630, guid: 265969eb1e4e7814795f94d788e0240e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119424290619151630, guid: 265969eb1e4e7814795f94d788e0240e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119424290619151630, guid: 265969eb1e4e7814795f94d788e0240e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119424290619151630, guid: 265969eb1e4e7814795f94d788e0240e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119424290619151630, guid: 265969eb1e4e7814795f94d788e0240e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119424290619151630, guid: 265969eb1e4e7814795f94d788e0240e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119424290619151630, guid: 265969eb1e4e7814795f94d788e0240e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119424290619151630, guid: 265969eb1e4e7814795f94d788e0240e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119424290619151630, guid: 265969eb1e4e7814795f94d788e0240e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119424290619151630, guid: 265969eb1e4e7814795f94d788e0240e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119424290619151630, guid: 265969eb1e4e7814795f94d788e0240e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119424290619151628, guid: 265969eb1e4e7814795f94d788e0240e,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e0d57144be7ea474d9b911e94d411b01, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 265969eb1e4e7814795f94d788e0240e, type: 3}
 --- !u!1 &915510224
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +330,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -514,7 +588,7 @@ PrefabInstance:
     - target: {fileID: 573393608758898407, guid: afefe1a49c4fd3e489cd4600107f9008,
         type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 16777215
+      value: 184549375
       objectReference: {fileID: 0}
     - target: {fileID: 573393608758898407, guid: afefe1a49c4fd3e489cd4600107f9008,
         type: 3}

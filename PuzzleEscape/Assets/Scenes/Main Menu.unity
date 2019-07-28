@@ -667,7 +667,7 @@ PrefabInstance:
     - target: {fileID: 2478443867966712516, guid: cb0c9a0480c41cf4f86211b3647bdd02,
         type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: Canvas MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 2478443867966712520, guid: cb0c9a0480c41cf4f86211b3647bdd02,
         type: 3}
@@ -1808,6 +1808,11 @@ PrefabInstance:
         type: 3}
       propertyPath: BypassEffects
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119424290619151628, guid: 265969eb1e4e7814795f94d788e0240e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 265969eb1e4e7814795f94d788e0240e, type: 3}

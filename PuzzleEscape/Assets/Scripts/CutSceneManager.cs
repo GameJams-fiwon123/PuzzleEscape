@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CutSceneManager : MonoBehaviour
-{ 
+{
+
+    public void Start()
+    {
+        MusicManager.instance.ChangeToHistoriaAudio();
+    }
 
     public void PauseAnimation()
     {

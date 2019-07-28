@@ -9,9 +9,12 @@ public class MusicManager : MonoBehaviour
     [SerializeField] AudioClip level2Audio = null;
     [SerializeField] AudioClip historiaAudio = null;
 
+    public static MusicManager instance;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+
         if (FindObjectsOfType<MusicManager>().Length > 1)
         {
             Destroy(gameObject);
@@ -19,6 +22,7 @@ public class MusicManager : MonoBehaviour
         else
         {
             DontDestroyOnLoad(gameObject);
+            instance = this;
         }
     }
 

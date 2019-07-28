@@ -5,6 +5,7 @@ public class LevelLoader : MonoBehaviour
 {
     public void LoadMainMenu()
     {
+        MusicManager.instance.ChangeToTitleAudio();
         SceneManager.LoadScene(0);
     }
 
