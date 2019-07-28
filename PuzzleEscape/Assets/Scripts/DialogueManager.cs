@@ -8,7 +8,7 @@ public class DialogueManager : MonoBehaviour
     [Range(0,1)]
     [SerializeField] float waitTime = 0.05f;
 
-    [SerializeField] TextMeshProUGUI dialogueText;
+    [SerializeField] TextMeshProUGUI dialogueText = null;
 
     [SerializeField] List<string> dialogues = new List<string>();
     int index = -1;

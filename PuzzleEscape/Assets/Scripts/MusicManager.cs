@@ -33,6 +33,12 @@ public class MusicManager : MonoBehaviour
         GetComponent<AudioSource>().Play();
     }
 
+    public void ChangeToHistoriaAudio()
+    {
+        GetComponent<AudioSource>().clip = historiaAudio;
+        GetComponent<AudioSource>().Play();
+    }
+
     public void ChangeToLevelAudio(int level)
     {
         switch (level)

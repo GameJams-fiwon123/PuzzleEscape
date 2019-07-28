@@ -62,7 +62,6 @@ public class ItemsManager : MonoBehaviour
 
     public void SelectItem(int index)
     {
-        print(items.Count);
         if (items.Count > 0)
         {
             currentItem = items[index];
