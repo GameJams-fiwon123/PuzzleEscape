@@ -6,6 +6,9 @@ public class Armario : MonoBehaviour
 {
     [SerializeField] GameObject armarioOpen = null;
 
+    [SerializeField] SpriteRenderer _sprite = null;
+    [SerializeField] Sprite _spriteOpen = null;
+
     int needIdItem = 2;
     bool isOpen = false;
 
@@ -19,6 +22,7 @@ public class Armario : MonoBehaviour
                 gameObject.SetActive(false);
                 isOpen = true;
                 armarioOpen.SetActive(true);
+                _sprite.sprite = _spriteOpen;
             }
         }
     }
