@@ -5,6 +5,8 @@ using UnityEngine;
 public class CutSceneManager : MonoBehaviour
 {
 
+    [SerializeField] AudioClip effectSound = null;
+
     public void Start()
     {
         MusicManager.instance.ChangeToHistoriaAudio();
@@ -28,5 +30,12 @@ public class CutSceneManager : MonoBehaviour
     public void Finish()
     {
         FindObjectOfType<LevelLoader>().NextScene();
+    }
+
+    public void PlaySound()
+    {
+        print("oi");
+        GetComponent<AudioSource>().clip = effectSound;
+        GetComponent<AudioSource>().Play();
     }
 }
