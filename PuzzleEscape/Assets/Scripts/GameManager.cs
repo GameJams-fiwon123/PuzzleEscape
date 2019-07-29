@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
             if (minCount >= 0)
             {
                 timer.text = minCount + ":" + Math.Round(secCount, 0).ToString();
-                if (secCount < 9)
+                if (secCount < 9.5f)
                 {
                     timer.text = minCount + ":" + "0" + Math.Round(secCount, 0).ToString();
                 }
