@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Pintura : MonoBehaviour
 {
+    [SerializeField] SpriteRenderer _sprite = null;
+    [SerializeField] Sprite _spriteOpen = null;
+
     [SerializeField] GameObject item = null;
 
     private void OnMouseDown()
@@ -13,8 +16,12 @@ public class Pintura : MonoBehaviour
             if (FindObjectOfType<ItemsManager>().GetCurrentItem())
             {
                 if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == 8)
+                {
                     FindObjectOfType<ItemsManager>().RemoveSelectItem();
-                GetComponent<Animator>().Play("OpenPintura");
+                    item.SetActive(true);
+                    item.GetComponent<Item>().ChangeTake(true);
+                    _sprite.sprite = _spriteOpen;
+                }
             }
         }
     }

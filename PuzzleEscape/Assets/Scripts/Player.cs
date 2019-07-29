@@ -30,11 +30,17 @@ public class Player : MonoBehaviour
 
         if (motion.x > 0)
         {
+            GetComponent<Animator>().Play("Walk");
             transform.localScale = rightScale;
         }
         else if (motion.x < 0)
         {
+            GetComponent<Animator>().Play("Walk");
             transform.localScale = leftScale;
+        }
+        else
+        {
+            GetComponent<Animator>().Play("Idle");
         }
 
             rb2d.velocity = motion.normalized * Time.deltaTime * speed;
