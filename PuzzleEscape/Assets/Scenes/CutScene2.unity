@@ -309,7 +309,7 @@ PrefabInstance:
     - target: {fileID: 573393608505525061, guid: afefe1a49c4fd3e489cd4600107f9008,
         type: 3}
       propertyPath: dialogues.Array.data[0]
-      value: "\u201CMeus Deus!  Que sonho horr\xEDvel!  Nunca imaginei uma coisa t\xE3o
+      value: "\u201CMeu Deus!  Que sonho horr\xEDvel!  Nunca imaginei uma coisa t\xE3o
         monstruosa.  Ser\xE1 que conseguirei comer bolo algum dia de novo?\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 573393608505525061, guid: afefe1a49c4fd3e489cd4600107f9008,
