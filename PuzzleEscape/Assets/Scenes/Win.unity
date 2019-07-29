@@ -435,7 +435,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: e0d57144be7ea474d9b911e94d411b01, type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 265969eb1e4e7814795f94d788e0240e, type: 3}
 --- !u!1 &915510224
@@ -807,17 +807,22 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 573393608499786715, guid: afefe1a49c4fd3e489cd4600107f9008,
-        type: 3}
-      propertyPath: effectSound
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 573393607932077036, guid: afefe1a49c4fd3e489cd4600107f9008,
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -8442588780965990692, guid: 834f23b15cafbda4383265759d27a725,
         type: 2}
+    - target: {fileID: 573393608499786715, guid: afefe1a49c4fd3e489cd4600107f9008,
+        type: 3}
+      propertyPath: effectSound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 573393608499786715, guid: afefe1a49c4fd3e489cd4600107f9008,
+        type: 3}
+      propertyPath: playMusic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afefe1a49c4fd3e489cd4600107f9008, type: 3}
 --- !u!224 &1525074973 stripped

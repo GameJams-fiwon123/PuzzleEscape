@@ -6,10 +6,16 @@ public class CutSceneManager : MonoBehaviour
 {
 
     [SerializeField] AudioClip effectSound = null;
+    [SerializeField] bool playMusic = true;
 
     public void Start()
     {
-        MusicManager.instance.ChangeToHistoriaAudio();
+        if (playMusic)
+            MusicManager.instance.ChangeToHistoriaAudio();
+        else
+        {
+            MusicManager.instance.StopMusic();
+        }
     }
 
     public void PauseAnimation()
