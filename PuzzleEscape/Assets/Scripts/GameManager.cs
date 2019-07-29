@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
             if (minCount >= 0)
             {
                 timer.text = minCount + ":" + Math.Round(secCount, 0).ToString();
-                if (secCount < 10)
+                if (secCount < 9)
                 {
                     timer.text = minCount + ":" + "0" + Math.Round(secCount, 0).ToString();
                 }
@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
     public void LoseGame()
     {
         FindObjectOfType<LevelLoader>().LoseGame();
+        MusicManager.instance.StopMusic();
     }
 
     public void WinGame()

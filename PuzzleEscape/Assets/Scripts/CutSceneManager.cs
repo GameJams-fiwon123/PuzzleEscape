@@ -34,7 +34,6 @@ public class CutSceneManager : MonoBehaviour
 
     public void PlaySound()
     {
-        print("oi");
         GetComponent<AudioSource>().clip = effectSound;
         GetComponent<AudioSource>().Play();
     }

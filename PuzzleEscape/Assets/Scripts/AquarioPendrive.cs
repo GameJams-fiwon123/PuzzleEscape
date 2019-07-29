@@ -18,10 +18,11 @@ public class AquarioPendrive : MonoBehaviour
         {
             if (FindObjectOfType<ItemsManager>().GetCurrentItem().GetId() == 6 && !isBreak)
             {
-                item.SetActive(true);
                 FindObjectOfType<ItemsManager>().RemoveSelectItem();
                 GetComponent<AudioSource>().Play();
                 quebradoBackground.sprite = aquarioQuebrado;
+                item.GetComponent<Item>().ChangeTake(true);
+                item.GetComponent<SpriteRenderer>().color = new Color(1,1,1,1);
                 isBreak = true;
             }
         }
