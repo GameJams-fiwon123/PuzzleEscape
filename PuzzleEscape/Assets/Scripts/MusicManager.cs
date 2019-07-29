@@ -33,8 +33,11 @@ public class MusicManager : MonoBehaviour
 
     public void ChangeToTitleAudio()
     {
-        GetComponent<AudioSource>().clip = tileAudio;
-        GetComponent<AudioSource>().Play();
+        if (GetComponent<AudioSource>().clip != tileAudio)
+        {
+            GetComponent<AudioSource>().clip = tileAudio;
+            GetComponent<AudioSource>().Play();
+        }
     }
 
     public void ChangeToHistoriaAudio()
